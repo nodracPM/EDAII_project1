@@ -10,6 +10,7 @@ public class SortAlgorithms{
                 cont++; 
                 if(a[j]>a[j+1]) { //comparison
                     Utilerias.swap(a, j, j+1); //swap    
+                    band = false; 
                     cont++;              
                 }
 		    }
