@@ -16,6 +16,29 @@ public class SortAlgorithms{
 	    }
         return cont; 
     }
+
+    public static int selectionSort(int[] a, int n){
+        int indiceMenor;
+        int cont = 0;
+
+        for (int i = 0; i<n-1;i++){
+            indiceMenor = i;
+            for(int j = i+1; j<n; j++){
+                cont++; //comparison
+                if(a[j]<a[indiceMenor]){
+                    indiceMenor = j;
+                }
+            }
+            cont++; //comparison
+            if(i!=indiceMenor){
+                Utilerias.swap(a,i, indiceMenor);
+                cont++; //swap
+            }
+        }
+        return cont;
+
+    }
+
     public static int insertionSort(int[] a, int size) {
         int i,j, cont = 0;
         int aux;
@@ -49,5 +72,20 @@ public class SortAlgorithms{
         }
         return cont; 
     }
+
+    public static int quickSort(int a[], int low, int high){
+        int cont = 0;
+        cont++; //comparison
+        if (low < high){
+            int[] ret = Utilerias.partition(a, low, high);
+            int pi = ret[0];
+            cont += ret[1];
+            quickSort(a, low, pi-1);
+            quickSort(a, pi+1, high);
+        }   
+        return cont;
+    }
+
+    //extra
 
 }
