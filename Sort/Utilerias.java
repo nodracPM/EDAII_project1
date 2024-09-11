@@ -30,7 +30,7 @@ public class Utilerias{
   	    if(largest != i){  //comparison
     	    swap(a, i, largest); //swap 
             cont++; 
-    	    cont += heapify(a, i, size);
+    	    cont += heapify(a, largest, size);
         }
         cont+=3; //number of comparisons
 

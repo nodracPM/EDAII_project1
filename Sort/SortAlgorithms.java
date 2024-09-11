@@ -9,7 +9,8 @@ public class SortAlgorithms{
             for(j = 0; j < i; j++) {
                 cont++; 
                 if(a[j]>a[j+1]) { //comparison
-                    Utilerias.swap(a, j, j+1); //swap    
+                    Utilerias.swap(a, j, j+1); //swap  
+                    band = false;   
                     cont++;              
                 }
 		    }
