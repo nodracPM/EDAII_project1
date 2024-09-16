@@ -87,9 +87,9 @@ public class Utilerias{
 
         for(int i = 0; i < 8; i++) {
             System.out.println("\tTamaño de arreglo: " + sizes[i]);
-        }
-        for(int j = 0; j < 5; j++) {
-            System.out.println("\t\tEjecución " + j + ": " + resulst[0][j] + "operaciones");
+            for(int j = 0; j < 5; j++) {
+                System.out.println("\t\tEjecución " + j + ": " + resulst[i][j] + " operaciones");
+            }
         }
     }
 
