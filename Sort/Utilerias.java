@@ -6,17 +6,20 @@ public class Utilerias{
         a[x] = a[y]; 
         a[y] = aux; 
     }
+
     public static void printArray(int[] a, int size) {
         for (int i = 0; i < size; i++) {
             System.out.print(a[i] + " ");
         }
         System.out.println();
     }
+
     public static int buildHeap(int[] a, int size) {
         int cont = 0; 
   	    for(int i = (size - 2) / 2; i >= 0; i--) cont += heapify(a, i, size);
         return cont; 
     }
+
     public static int heapify(int[] a, int i, int size) {
         int cont = 0; 
 
@@ -50,12 +53,24 @@ public class Utilerias{
                 cont++; //swap
             }
         }
-        int temp = arr[i+1];
-        arr[i+1] = arr[high];
-        arr[high] = temp;
+        Utilerias.swap(arr,i+1,high);//swap
+        cont++;
         ret[0] = i+1;
         ret[1] = cont;
         return ret;
+    }
+
+    public static int flip(int a[], int i){
+        int temp, inicio = 0;
+        int  cont = 0;
+
+        while(inicio < i){
+            cont++;//swap
+            Utilerias.swap(a,inicio,i);
+            inicio++;
+            i--;
+        }
+        return cont;
     }
 
 }
