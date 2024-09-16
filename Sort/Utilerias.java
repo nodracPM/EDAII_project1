@@ -18,7 +18,26 @@ public class Utilerias{
         int[] array = new int[arrayList.size()]; 
 
         for(int i = 0; i < arrayList.size(); i++) array[i] = arrayList.get(i); 
-        
+
         return array; 
+    }
+    public static void printIndividualResults(int [][] resulst) {
+        int[] sizes = {50, 100, 500, 800, 1000, 2000, 5000, 10000};
+
+        for(int i = 0; i < 8; i++) {
+            System.out.println("\tTamaño de arreglo: " + sizes[i]);
+        }
+        for(int j = 0; j < 5; j++) {
+            System.out.println("\t\tEjecución " + j + ": " + resulst[0][j] + "operaciones");
+        }
+    }
+
+    public static void printGeneralRestuls(int [][][] resulst) {
+        String[] algoritmos = {"Bubble sort", "Insertion sort", "Selection sort", "Heap sort", "Quick sort", "Merge sort", "Pancake sort"};
+        
+        for(int i = 0; i < 7; i++) {
+            System.out.println(algoritmos[i] + ":");
+            printIndividualResults(resulst[i]);
+        }
     }
 }

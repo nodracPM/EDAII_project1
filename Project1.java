@@ -81,10 +81,14 @@ public class Project1 {
                 results[5][i][j] = MergeSort.mergeSort(aux, 0, sizes[i] - 1); //[algoritmo][tamaño del arreglo][#ejecución]
             }
         }
-        //6. CycleSort
+        //6. PancakeSort
+
+    //Impresión de la tabla de resultados 
+
+        System.out.println("Tabla de resultados bubble sort");
 
 
-
+    //Obtención de promedios 
         int size = 13, size2 = 100, cont1, cont2, cont3 ,cont4 ,cont5, cont6, cont7; 
 
         int[] a = {1, 4, 12, 31, 42, 11, 1, 66, 32, 8, 9, 19, 10}; //size = 13
