@@ -68,7 +68,19 @@ public class Project1 {
             }
         }
         //4. QuickSort
+        for(int i = 0; i < 8; i++) { //tamaño
+            for(int j = 0; j < 5; j++) { //ejecución
+                int []aux = Utilerias.toArray(arrays_sizes.get(i).get(j)); //convierte el ArrayList a array (no objeto)
+                results[4][i][j] = QuickSort.quickSort(aux, 0, sizes[i] - 1); //[algoritmo][tamaño del arreglo][#ejecución]
+            }
+        }
         //5. MergeSort
+        for(int i = 0; i < 8; i++) { //tamaño
+            for(int j = 0; j < 5; j++) { //ejecución
+                int []aux = Utilerias.toArray(arrays_sizes.get(i).get(j)); //convierte el ArrayList a array (no objeto)
+                results[5][i][j] = MergeSort.mergeSort(aux, 0, sizes[i] - 1); //[algoritmo][tamaño del arreglo][#ejecución]
+            }
+        }
         //6. CycleSort
 
 
