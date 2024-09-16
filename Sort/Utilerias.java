@@ -88,7 +88,7 @@ public class Utilerias{
         for(int i = 0; i < 8; i++) {
             System.out.println("\tTamaño de arreglo: " + sizes[i]);
             for(int j = 0; j < 5; j++) {
-                System.out.println("\t\tEjecución " + j + ": " + resulst[i][j] + " operaciones");
+                System.out.println("\t\tEjecución " + (j+1) + ": " + resulst[i][j] + " operaciones");
             }
         }
     }
@@ -99,6 +99,30 @@ public class Utilerias{
         for(int i = 0; i < 7; i++) {
             System.out.println(algoritmos[i] + ":");
             printIndividualResults(resulst[i]);
+        }
+    }
+
+    public static void promedios(int[][][] resultados, double[][] promedios) {
+        for(int i = 0; i < 7; i++) { //algoritmo 
+            for(int j = 0; j < 8; j++) {//tamaño
+                double aux = 0; 
+                for(int k = 0; k < 5; k++) aux += resultados[i][j][k]; //#ejecución
+                promedios[i][j] = aux/5; 
+            }
+        }
+    }
+
+    public static void printPromedios(double[][] promedios) {
+        int[] sizes = {50, 100, 500, 800, 1000, 2000, 5000, 10000};
+        String[] algoritmos = {"Bubble sort", "Insertion sort", "Selection sort", "Heap sort", "Quick sort", "Merge sort", "Pancake sort"};
+
+        System.out.println("Promedios\n");
+
+        for(int i = 0; i < 7; i++) {
+            System.out.println(algoritmos[i] + ":");
+            for(int j = 0; j < 8; j++) {
+                System.out.println("\tTamaño " + sizes[j] + ": " + promedios[i][j]);
+            }
         }
     }
 }

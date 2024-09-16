@@ -17,12 +17,26 @@ public class Project1 {
     //Generación de números aleatorios
         int[] sizes = {50, 100, 500, 800, 1000, 2000, 5000, 10000};
         ArrayList<ArrayList<ArrayList<Integer>>> arrays_sizes = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> ejecuciones = new ArrayList<>();
-        ArrayList<Integer> arrays = new ArrayList<>(); 
+        //ArrayList<Integer> arrays = new ArrayList<>(); 
 
-            //creación de la estructura para guardar todos los arreglos
-        for(int i = 0; i < 5; i++) ejecuciones.add(arrays); //se agregan las 5 ejecuciones de para un tamaño n
-        for(int i = 0; i < 8; i++) arrays_sizes.add(ejecuciones); //se crean los ocho conjuntos de 5 ejecuciones para cada tamaño
+        //creación de la estructura para guardar todos los arreglos
+
+        /*Si se trata de incializar el tamaño de cada sub-arreglo (por ejemplo el que contiene a los tamaños) creando uno con las dimensiones
+         requeridas y asignandola n veces al arreglo inmediato superior, al tratarse de un objeto se asigna el mismo 
+         a cada elemento y cuando se modifique alguno se modifica el mismo, es decir, todos guardan el mismo arreglo y cualquier modificación
+         desde índices distintos afecta al mismo
+        */
+        for(int i = 0; i < 8; i++) {
+            ArrayList<ArrayList<Integer>> tamaño = new ArrayList<>(); //dimensión para los 8 tamaños
+            for(int j = 0; j < 5; j++) {
+                ArrayList<Integer> ejecuciones = new ArrayList<>(); //dimensión para las 5 ejecuciones
+                for(int k = 0; k < sizes[i]; k++) {
+                    ejecuciones.add(random.nextInt(101)); 
+                }
+                tamaño.add(ejecuciones); 
+            }
+            arrays_sizes.add(tamaño); 
+        }
  
 
         //System.out.println(arrays_sizes.size()); //Prueba para detectar errores
@@ -35,6 +49,7 @@ public class Project1 {
                 }
             }
         }
+
 
         //arreglo de tres dimensiones para guardar los resultados
         int[][][] results = new int[7][8][5]; //[algoritmo][tamaño del arreglo][#ejecución]
@@ -96,6 +111,8 @@ public class Project1 {
 
 
     //Obtención de promedios 
-
+        double[][] promedios = new double[7][8]; 
+        Utilerias.promedios(results, promedios);
+        Utilerias.printPromedios(promedios);
     }
 }
