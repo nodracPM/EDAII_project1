@@ -1,7 +1,7 @@
 /*
  * Autor: Cardón Carillo Pedro Manuel
- * Ultima modificación: 15-Sep-2024
- * Propósito: Método principal (Declaraciones, llamadas a algoritmos, impresión de resultados)
+ * Ultima modificación: 13-Sep-2024
+ * Propósito: Método para la ejecución de insertion sort
  */
 
 package Sort;

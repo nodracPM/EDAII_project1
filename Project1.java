@@ -1,7 +1,7 @@
 /*
  * Autores: Cardón Carillo Pedro Manuel, Campos Cortés Isaac Jareth
  * Ultima modificación: 15-Sep-2024
- * Propósito: Método principal (Declaraciones, llamadas a algoritmos, impresión de resultados)
+ * Propósito: Método principal (Declaraciones, generación de arreglos, llamadas a algoritmos, impresión de resultados)
  */
 
 
