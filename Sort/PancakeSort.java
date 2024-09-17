@@ -1,3 +1,9 @@
+/*
+ * Autor: Campos Cortés Isaac Jareth
+ * Ultima modificación: 14-Sep-2024
+ * Propósito: Método para la ejecución de Pancake Sort
+ */
+
 package Sort;
 
 public class PancakeSort{

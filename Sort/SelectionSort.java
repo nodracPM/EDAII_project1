@@ -1,3 +1,9 @@
+/*
+ * Autor: Campos Cortés Isaac Jareth
+ * Ultima modificación: 12-Sep-2024
+ * Propósito: Método para la ejecución de Selection Sort
+ */
+
 package Sort;
 
 public class SelectionSort {

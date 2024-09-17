@@ -1,3 +1,9 @@
+/*
+ * Autor: Cardón Carillo Pedro Manuel
+ * Ultima modificación: 15-Sep-2024
+ * Propósito: Método principal (Declaraciones, llamadas a algoritmos, impresión de resultados)
+ */
+
 package Sort;
 
 public class BubbleSort {

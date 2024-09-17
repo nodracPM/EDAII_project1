@@ -1,3 +1,10 @@
+/*
+ * Autores: Cardón Carillo Pedro Manuel, Campos Cortés Isaac Jareth
+ * Ultima modificación: 15-Sep-2024
+ * Propósito: Declaración de los métodos para realizar todas las operaciones auxiliares necesarias
+ * (Intercambios, impresiones, contrucción de heaps, promedios, etc.)
+ */
+
 package Sort;
 
 import java.util.ArrayList;
@@ -63,7 +70,7 @@ public class Utilerias{
     }
 
     public static int flip(int a[], int i){
-        int temp, inicio = 0;
+        int inicio = 0;
         int  cont = 0;
 
         while(inicio < i){

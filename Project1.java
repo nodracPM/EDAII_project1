@@ -1,13 +1,21 @@
-import java.util.Random;
+/*
+ * Autores: Cardón Carillo Pedro Manuel, Campos Cortés Isaac Jareth
+ * Ultima modificación: 15-Sep-2024
+ * Propósito: Método principal (Declaraciones, llamadas a algoritmos, impresión de resultados)
+ */
+
+
+
 import Sort.BubbleSort;
-import Sort.HeapSort; 
+import Sort.HeapSort;
 import Sort.InsertionSort; 
-import Sort.QuickSort; 
-import Sort.SelectionSort; 
 import Sort.MergeSort;
 import Sort.PancakeSort;
-import Sort.Utilerias; 
+import Sort.QuickSort; 
+import Sort.SelectionSort;
+import Sort.Utilerias;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Project1 {
